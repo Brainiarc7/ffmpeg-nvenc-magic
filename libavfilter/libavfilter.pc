@@ -1,0 +1,14 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 5.1.106
+Requires: libswscale >= 3.1.101, libpostproc >= 53.3.100, libavformat >= 56.9.101, libavcodec >= 56.8.102, libswresample >= 1.1.100, libavutil >= 54.10.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavfilter -lXv -lX11 -lXext -lva -lXfixes -lXext -lX11 -ljack -lasound -lSDL -lssl -lcrypto -lGL -lOpenCL -lx264 -lpthread -lm -ldl -lwebp -lvpx -lvpx -lvpx -lvpx -ltheoraenc -ltheoradec -logg -lopus -lopenjpeg -DOPJ_STATIC /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so /usr/lib/x86_64-linux-gnu/libopencv_contrib.so /usr/lib/x86_64-linux-gnu/libopencv_core.so /usr/lib/x86_64-linux-gnu/libopencv_features2d.so /usr/lib/x86_64-linux-gnu/libopencv_flann.so /usr/lib/x86_64-linux-gnu/libopencv_gpu.so /usr/lib/x86_64-linux-gnu/libopencv_highgui.so /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so /usr/lib/x86_64-linux-gnu/libopencv_legacy.so /usr/lib/x86_64-linux-gnu/libopencv_ml.so /usr/lib/x86_64-linux-gnu/libopencv_objdetect.so /usr/lib/x86_64-linux-gnu/libopencv_ocl.so /usr/lib/x86_64-linux-gnu/libopencv_photo.so /usr/lib/x86_64-linux-gnu/libopencv_stitching.so /usr/lib/x86_64-linux-gnu/libopencv_superres.so /usr/lib/x86_64-linux-gnu/libopencv_ts.so /usr/lib/x86_64-linux-gnu/libopencv_video.so /usr/lib/x86_64-linux-gnu/libopencv_videostab.so -lopencv_calib3d -lopencv_contrib -lopencv_core -lopencv_features2d -lopencv_flann -lopencv_gpu -lopencv_highgui -lopencv_imgproc -lopencv_legacy -lopencv_ml -lopencv_objdetect -lopencv_ocl -lopencv_photo -lopencv_stitching -lopencv_superres -lopencv_ts -lopencv_video -lopencv_videostab -ldl -lmp3lame -lfdk-aac -lfaac -lbluray -lass -lcrystalhd -lm -llzma -lbz2 -lz -pthread
+Libs.private: 
+Cflags: -I${includedir}
